@@ -1,4 +1,7 @@
--# edit.html.haml using partial
+%h1
+  %a{:href => "/"}
+    %font{:color => "red"} Rotten Potatoes
+
 
 %h1 Edit Existing Movie
 
@@ -12,5 +15,12 @@
 
   = label :movie, :release_date, 'Released On'
   = date_select :movie, :release_date
+  
+  = label :movie, :description, 'Description'
+  = text_field :movie, 'description'
 
   = submit_tag 'Update Movie Info'
+  
+
+  
+%a{:href => "/"} Cancel
